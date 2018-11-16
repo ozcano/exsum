@@ -1,0 +1,56 @@
+// CODE DOCUMENTATION FOR INPUT/ASSISTANTS.CSV
+
+This file lists the unavailabilities in each assistant's schedule.
+The times each assistant is unavailable is used to determine whether
+they are eligible to supervise a given exam listed in the exams.csv file.
+
+This is how assistants.csv is structured:
+
+@ Name of teaching assistant 1
+R, "Unavailability Description", Day of the Week, Start Time, End Time
+I, "Unavailability Description", Day of the Week, Start Time, End Time, Date
+
+@ Name of teaching assistant 2
+R, "Unavailability Description", Day of the Week, Start Time, End Time
+I, "Unavailability Description", Day of the Week, Start Time, End Time, Date
+
+and so on, where:
+
+R/I
+  * Denotes whether this is a regular (R) or irregular (I) unavailability.
+  * Regular unavailabilities (R) occur every week on the same week day
+  * and at the same start and end times.
+"Unavailability Description"
+  * This is a descriptor that explains why the assistant is unavailable
+  * at the specified date/time. The description should be a few words long at most.
+Day of the Week
+  * MON, TUE, WED, THU, or FRI
+Start Time
+  * Legal range is from 0030 to 2330
+End Time
+  * Legal range is from 0030 to 2330
+Date
+  * Date of the irregular unavailability
+ALL_DAY: Used instead of Start Time & End Time if the unavailability lasts the entire day
+
+// EXAMPLE ASSISTANTS.CSV FILE
+
+@John Doe
+R,"Teaching CS.101",MON,1030,1230
+R,"Teaching CS.101",TUE,1430,1630
+R,"Teaching CS.101",WED,1330,1530
+R,"Teaching CS.101",THU,930,1230
+R,"Teaching CS.201",FRI,1330,1730
+I,"Conference",MON,ALL_DAY,12.11.2018
+I,"Conference",TUE,ALL_DAY,13.11.2018
+I,"Conference",WED,ALL_DAY,14.11.2018
+I,"Conference",THU,ALL_DAY,15.11.2018
+I,"Conference",FRI,ALL_DAY,16.11.2018
+
+@Jane Doe
+R,"Teaching CS.301",TUE,1330,1630
+R,"Teaching CS.301",WED,1030,1230
+R,"Teaching CS.201",WED,1330,1530
+R,"Teaching CS.202",FRI,930,1130
+R,"Teaching CS.302",FRI,1330,1530
+I,"Doctor's appointment",THU,1330,1730,22.11.2018
