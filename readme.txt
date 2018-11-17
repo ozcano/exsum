@@ -1,5 +1,5 @@
-// AUTHOR
-Onur Y. Özcan <https://ozcan.io>
+﻿// AUTHOR
+Onur Y. Ozcan <https://ozcan.io>
  
 // PROJECT DESCRIPTION
 ExSuM stands for "Exam Supervision Manager" and is intended to help

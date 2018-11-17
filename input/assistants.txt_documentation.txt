@@ -1,0 +1,84 @@
+// CODE DOCUMENTATION FOR INPUT/ASSISTANTS.CSV
+
+This file lists the unavailabilities in each assistant's schedule.
+The times each assistant is unavailable is used to determine whether
+they are eligible to supervise a given exam listed in the exams.csv file.
+
+This is how assistants.csv is structured:
+
+@ Name of teaching assistant 1
+R, Unavailability Description, Day of the Week, Start Time, End Time
+I, Unavailability Description, Day of the Week, Start Time, End Time, Date
+
+@ Name of teaching assistant 2
+R, Unavailability Description, Day of the Week, Start Time, End Time
+I, Unavailability Description, Day of the Week, Start Time, End Time, Date
+
+and so on, where:
+
+R/I
+  * Denotes whether this is a regular (R) or irregular (I) unavailability.
+  * Regular unavailabilities (R) occur every week on the same week day
+  * and at the same start and end times.
+Unavailability Description
+  * This is a descriptor that explains why the assistant is unavailable
+  * at the specified date/time. The description should be a few words long at most.
+Day of the Week
+  * MON, TUE, WED, THU, or FRI
+Start Time
+  * Legal range is from 0000 to 2359 (i.e. 00:00 to 23:59)
+End Time
+  * Legal range is from 0000 to 2359 (i.e. 00:00 to 23:59)
+Date
+  * Date of the irregular unavailability
+ALL_DAY: Used instead of Start Time & End Time if the unavailability lasts the entire day
+
+// EXAMPLE ASSISTANTS.CSV FILE
+
+@Ali Ozturk
+R,Teaching CS.202,MON,1030,1230
+R,Teaching CS.202,TUE,1430,1630
+R,Teaching CS.202,WED,1330,1530
+R,Teaching CS.202,THU,930,1230
+R,Teaching CS.202,FRI,1330,1730
+I,Conference,MON,ALL_DAY,12.11.2018
+I,Conference,TUE,ALL_DAY,13.11.2018
+I,Conference,WED,ALL_DAY,14.11.2018
+I,Conference,THU,ALL_DAY,15.11.2018
+I,Conference,FRI,ALL_DAY,16.11.2018
+
+@Arzu Hakan
+R,Teaching CS.202,TUE,1330,1630
+R,Teaching CS.202,WED,1030,1230
+R,Teaching CS.202,WED,1330,1530
+R,Teaching CS.202,FRI,930,1130
+R,Teaching CS.202,FRI,1330,1530
+I,Doctor's appointment,THU,1330,1730,22.11.2018
+
+@Ayse Gungor
+R,Teaching CS.202,MON,930,1230
+R,Teaching CS.202,MON,1330,1530
+R,Teaching CS.202,WED,1330,1530
+R,Teaching CS.202,WED,930,1230
+R,Teaching CS.202,FRI,930,1130
+
+@Cem Cesur
+R,Teaching CS.202,MON,1330,1530
+R,Teaching CS.202,THU,1030,1230
+R,Teaching CS.202,THU,1430,1630
+R,Teaching CS.202,FRI,930,1130
+R,Teaching CS.202,FRI,1330,1530
+
+@Mehmet Celik
+R,Teaching CS.202,WED,930,1230
+R,Teaching CS.202,WED,1430,1630
+R,Teaching CS.202,THU,930,1230
+R,Teaching CS.202,THU,1330,1530
+R,Teaching CS.202,FRI,930,1130
+
+@Meral Vardar
+R,Teaching CS.202,MON,1130,1330
+R,Teaching CS.202,TUE,930,1030
+R,Teaching CS.202,WED,1030,1230
+R,Teaching CS.202,THU,1330,1530
+R,Teaching CS.202,FRI,930,1230

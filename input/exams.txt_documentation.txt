@@ -1,6 +1,15 @@
-/*
+// CODE DOCUMENTATION FOR INPUT/EXAMS.CSV
+
+This file lists the dates for each exam. These dates are compared with
+assistants' schedules to determine whether the assistant is available
+to supervise the (current) exam.
+
+This is how exams.csv is structured:
+
 CRN, COURSE CODE, EXAM DATE, DAY OF THE WEEK, START TIME, END TIME, LOCATION
-*/
+
+// EXAMPLE ASSISTANTS.CSV FILE
+
 10579,CEV 201E,12.11.2018,MON,0930,1130,INB A201
 10579,CEV 201E,12.11.2018,MON,1330,1530,INB A201
 10579,CEV 201E,13.11.2018,TUE,0930,1130,INB A201
